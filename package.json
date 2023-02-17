@@ -1,0 +1,25 @@
+{
+  "name": "ryu-bot",
+  "version": "1.0.0",
+  "description": "My own personal discord bot",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dragon4926/Ryu-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dragon4926/Ryu-Bot/issues"
+  },
+  "homepage": "https://github.com/Dragon4926/Ryu-Bot#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
