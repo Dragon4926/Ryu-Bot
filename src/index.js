@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Client, IntentsBitField, EmbedBuilder } = require("discord.js");
+const { Client, IntentsBitField, EmbedBuilder, ActivityType } = require("discord.js");
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
@@ -9,8 +9,29 @@ const client = new Client({
   ],
 });
 
+let status = [
+  {
+    name: 'Youtube',
+    type: ActivityType.Watching,
+    url: 'https://youtu.be/6Ig__B6tNaQ'
+  },
+  {
+    name: 'discord.js',
+    type: ActivityType.Listening,
+  },
+  {
+    name: 'VALORANT',
+    type: ActivityType.Playing,
+  }
+]
+
 client.on("ready", (c) => {
   console.log(`${c.user.username} is ready 👌`);
+
+  setInterval(() => {
+      let random = Math.floor(Math.random() * status.length);
+      client.user.setActivity(status[random]);
+    }, 10000);
 });
 
 client.on("interactionCreate", async (interaction) => {
