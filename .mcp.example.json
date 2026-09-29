@@ -1,0 +1,12 @@
+{
+  "servers": [
+    {
+      "name": "example_read_only",
+      "enabled": false,
+      "command": "npx",
+      "args": ["-y", "@example/mcp-server"],
+      "env": {},
+      "allowTools": ["search", "get_document"]
+    }
+  ]
+}

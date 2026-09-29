@@ -1,1 +1,10 @@
 .env
+.env.*
+!.env.example
+.mcp.json
+node_modules/
+data/
+*.log
+.DS_Store
+.vscode/
+src/tempCodeRunnerFile.js

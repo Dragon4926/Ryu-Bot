@@ -1,25 +1,29 @@
 {
-  "name": "ryu-bot",
-  "version": "1.0.0",
-  "description": "My own personal discord bot",
+  "name": "ryu-executive-assistant",
+  "version": "2.0.0",
+  "description": "A private, capable executive personal assistant for Discord",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "check": "node --check src/index.js && find src -name '*.js' -not -path '*/index.js' -exec node --check {} +",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.11.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dragon4926/Ryu-Bot.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dragon4926/Ryu-Bot/issues"
-  },
-  "homepage": "https://github.com/Dragon4926/Ryu-Bot#readme",
   "dependencies": {
-    "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3",
-    "nodemon": "^2.0.20"
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "discord.js": "^14.22.1",
+    "dotenv": "^17.2.2",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
